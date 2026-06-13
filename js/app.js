@@ -71,8 +71,10 @@
     return sha256.slice(0, 12) + '…' + sha256.slice(-12);
   }
 
-  function downloadUrl(version, filename) {
-    return './releases/v' + version + '/' + filename;
+  function downloadUrl(version, asset) {
+    // Prefer CDN URL from releases.json, fall back to local path for dev
+    if (asset && asset.url) return asset.url;
+    return './releases/v' + version + '/' + (asset ? asset.name : '');
   }
 
   /* ---- Render -------------------------------------------- */
@@ -173,7 +175,7 @@
         if (asset && asset.name) {
           hasAny = true;
           var cls = f.primary ? 'dl-btn primary' : 'dl-btn secondary';
-          var url = downloadUrl(version, asset.name);
+          var url = downloadUrl(version, asset);
           var formatLabel = f.key === 'appImage' ? 'AppImage' : f.label.toUpperCase();
           actions +=
             '<a class="' + cls + '" href="' + url + '" ' +
