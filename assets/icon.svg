@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bgGrad" x1="72" y1="72" x2="952" y2="952" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F08C4A"/>
+      <stop offset="100%" stop-color="#D94E1E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background squircle -->
+  <rect x="64" y="64" width="896" height="896" rx="200" fill="url(#bgGrad)"/>
+
+  <!-- Waves -->
+  <path d="M 180 740 Q 300 710 420 740 Q 540 770 660 740 Q 780 710 844 740"
+        fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" opacity="0.4"/>
+  <path d="M 200 770 Q 320 740 440 770 Q 560 800 680 770 Q 800 740 830 770"
+        fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" opacity="0.25"/>
+
+  <!-- Hull -->
+  <path d="M 220 670 Q 512 800 804 670 L 760 720 Q 512 770 264 720 Z" fill="#FFFFFF"/>
+
+  <!-- Mast -->
+  <rect x="426" y="200" width="16" height="480" rx="8" fill="#FFFFFF" opacity="0.85"/>
+
+  <!-- Main sail (billowing right) -->
+  <path d="M 450 230 Q 640 370 800 540 L 450 660 Z" fill="#FFFFFF"/>
+
+  <!-- Jib (small front sail) -->
+  <path d="M 430 260 Q 300 420 270 560 L 430 640 Z" fill="#FFFFFF" opacity="0.7"/>
+
+</svg>

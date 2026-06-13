@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClaudePorter — Sync Claude Code sessions across devices</title>
+  <meta name="description" content="Sync Claude Code sessions and config across devices via Google Drive, with optional E2E encryption and dashboard-driven path remapping.">
+
+  <meta property="og:title" content="ClaudePorter">
+  <meta property="og:description" content="Sync Claude Code sessions and config across devices via Google Drive.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./assets/og-image.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ClaudePorter">
+  <meta name="twitter:description" content="Sync Claude Code sessions and config across devices via Google Drive.">
+  <meta name="twitter:image" content="./assets/og-image.png">
+
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ClaudePorter",
+    "description": "Sync Claude Code sessions and config across devices via Google Drive, with optional E2E encryption and dashboard-driven path remapping.",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "macOS, Windows, Linux"
+  }
+  </script>
+</head>
+<body>
+  <nav class="topbar" id="topbar">
+    <div class="topbar-inner">
+      <a href="#" class="topbar-brand" aria-label="ClaudePorter home">
+        <svg class="topbar-icon" viewBox="0 0 64 64" aria-hidden="true">
+          <rect x="4" y="4" width="56" height="56" rx="12" fill="url(#miniGrad)"/>
+          <path d="M12 46 Q28 32 52 46 L50 50 Q28 38 14 50 Z" fill="#fff"/>
+          <rect x="26" y="14" width="2" height="30" rx="1" fill="#fff" opacity="0.85"/>
+          <path d="M28 16 Q36 24 48 36 L28 46 Z" fill="#fff"/>
+          <path d="M26 18 Q18 28 16 40 L26 44 Z" fill="#fff" opacity="0.6"/>
+          <defs>
+            <linearGradient id="miniGrad" x1="4" y1="4" x2="60" y2="60">
+              <stop offset="0%" stop-color="#F08C4A"/>
+              <stop offset="100%" stop-color="#D94E1E"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="topbar-name">ClaudePorter</span>
+      </a>
+      <span class="topbar-version" id="version-badge" aria-hidden="true"></span>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-icon" aria-hidden="true">
+        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="bgGrad" x1="72" y1="72" x2="952" y2="952" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#F08C4A"/>
+              <stop offset="100%" stop-color="#D94E1E"/>
+            </linearGradient>
+          </defs>
+          <rect x="64" y="64" width="896" height="896" rx="200" fill="url(#bgGrad)"/>
+          <path d="M 180 740 Q 300 710 420 740 Q 540 770 660 740 Q 780 710 844 740" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" opacity="0.4"/>
+          <path d="M 200 770 Q 320 740 440 770 Q 560 800 680 770 Q 800 740 830 770" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" opacity="0.25"/>
+          <path d="M 220 670 Q 512 800 804 670 L 760 720 Q 512 770 264 720 Z" fill="#FFFFFF"/>
+          <rect x="426" y="200" width="16" height="480" rx="8" fill="#FFFFFF" opacity="0.85"/>
+          <path d="M 450 230 Q 640 370 800 540 L 450 660 Z" fill="#FFFFFF"/>
+          <path d="M 430 260 Q 300 420 270 560 L 430 640 Z" fill="#FFFFFF" opacity="0.7"/>
+        </svg>
+      </div>
+      <h1 class="hero-title">ClaudePorter</h1>
+      <p class="hero-tagline">Sync Claude Code sessions and config across devices via Google Drive, with optional E2E encryption and dashboard-driven path remapping.</p>
+      <a href="#downloads" class="hero-scroll" aria-label="Scroll to downloads">
+        <span>Download</span>
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+          <path d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </section>
+
+    <section class="features" id="features">
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 16h16v24l-8-4-8 4z"/>
+              <circle cx="24" cy="10" r="4"/>
+              <path d="M12 22H6v16h6M42 22h-6v16h6"/>
+            </svg>
+          </div>
+          <h3 class="feature-heading">Sync</h3>
+          <p class="feature-text">Push and pull Claude Code sessions across all your machines. Transcripts merge seamlessly — no lines ever dropped.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="10" y="14" width="28" height="24" rx="3"/>
+              <path d="M18 14V9a6 6 0 0112 0v5"/>
+              <circle cx="24" cy="27" r="3"/>
+              <path d="M24 27v4"/>
+            </svg>
+          </div>
+          <h3 class="feature-heading">Encrypt</h3>
+          <p class="feature-text">Optional end-to-end encryption with age. Your master identity wrapped with a passphrase — only you hold the keys.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 8h16l4 4h16v24H6z"/>
+              <path d="M18 26l4 4 8-8"/>
+            </svg>
+          </div>
+          <h3 class="feature-heading">Remap</h3>
+          <p class="feature-text">Same project at different paths on different machines? ClaudePorter rewrites paths so <code>claude --resume</code> works everywhere.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="downloads" id="downloads">
+      <h2 class="downloads-heading">Download</h2>
+      <p class="downloads-sub" id="downloads-sub">Loading the latest release…</p>
+      <div class="downloads-grid" id="downloads-grid">
+        <!-- Skeleton loaders rendered by app.js while fetching -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0 60 C360 120 720 0 1440 60 L1440 120 L0 120 Z"/>
+      </svg>
+    </div>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <svg class="footer-icon" viewBox="0 0 64 64" aria-hidden="true">
+          <rect x="4" y="4" width="56" height="56" rx="12" fill="url(#miniGrad2)"/>
+          <path d="M12 46 Q28 32 52 46 L50 50 Q28 38 14 50 Z" fill="#fff"/>
+          <rect x="26" y="14" width="2" height="30" rx="1" fill="#fff" opacity="0.85"/>
+          <path d="M28 16 Q36 24 48 36 L28 46 Z" fill="#fff"/>
+          <path d="M26 18 Q18 28 16 40 L26 44 Z" fill="#fff" opacity="0.6"/>
+          <defs>
+            <linearGradient id="miniGrad2" x1="4" y1="4" x2="60" y2="60">
+              <stop offset="0%" stop-color="#F08C4A"/>
+              <stop offset="100%" stop-color="#D94E1E"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span>ClaudePorter</span>
+      </div>
+      <nav class="footer-links">
+        <a href="https://github.com/arno2546/Claude-porter" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 ClaudePorter</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
