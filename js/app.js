@@ -24,7 +24,6 @@
       label: 'macOS',
       formats: [
         { key: 'dmg', label: 'DMG', primary: true },
-        { key: 'zip', label: 'ZIP', primary: false },
       ],
       icon: '<svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 20c6-4 12-4 18 0"/><circle cx="7" cy="10" r="2"/><circle cx="17" cy="15" r="2"/><circle cx="22" cy="8" r="2"/></svg>',
     },
@@ -33,7 +32,6 @@
       label: 'Windows',
       formats: [
         { key: 'exe', label: 'Installer', primary: true },
-        { key: 'zip', label: 'ZIP', primary: false },
       ],
       icon: '<svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="24" height="18" rx="2"/><path d="M2 11h24"/><circle cx="9" cy="8" r="1" fill="currentColor" stroke="none"/></svg>',
     },
@@ -42,7 +40,6 @@
       label: 'Linux',
       formats: [
         { key: 'appImage', label: 'AppImage', primary: true },
-        { key: 'deb', label: 'DEB', primary: false },
       ],
       icon: '<svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="14" cy="14" r="10"/><path d="M14 4a10 10 0 010 20"/><path d="M4 14h20"/><path d="M8 6l4 8M8 22l4-8M20 6l-4 8M20 22l-4-8"/></svg>',
     },
