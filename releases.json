@@ -1,17 +1,11 @@
 {
-  "latestVersion": "0.1.0",
+  "latestVersion": "0.1.0-beta",
   "channel": "beta",
-  "releaseUrl": "https://github.com/arno2546/claude-porter-landing/releases/tag/v0.1.0",
-  "releaseDate": "2026-06-13T18:30:00Z",
+  "releaseUrl": "https://github.com/arno2546/claude-porter-landing/releases/tag/v0.1.0-beta",
+  "releaseDate": "2026-06-13T12:23:01Z",
   "assets": {
-    "mac": {
-      "dmg": { "name": "claudeporter-0.1.0.dmg", "size": 82456789, "sha256": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b", "url": "./releases/v0.1.0/claudeporter-0.1.0.dmg" }
-    },
-    "win": {
-      "exe": { "name": "claudeporter-0.1.0-setup.exe", "size": 65678901, "sha256": "c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4", "url": "./releases/v0.1.0/claudeporter-0.1.0-setup.exe" }
-    },
-    "linux": {
-      "appImage": { "name": "claudeporter-0.1.0.AppImage", "size": 78901234, "sha256": "e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6", "url": "./releases/v0.1.0/claudeporter-0.1.0.AppImage" }
-    }
+    "mac": {"dmg":{"name":"claudeporter-0.1.0.dmg","size":125638812,"sha256":"1f795e5f87a500ed90fd98f79b97507e84a426b5aa90687e7e0b26a50237f144","url":"https://github.com/arno2546/claude-porter-landing/releases/download/v0.1.0-beta/claudeporter-0.1.0.dmg"},},
+    "win": {"exe":{"name":"claudeporter-0.1.0-setup.exe","size":102262712,"sha256":"5b81b2a2dbdfe4461d63af46faa6bbb0e97cd73eed775fdfb771802c65e38159","url":"https://github.com/arno2546/claude-porter-landing/releases/download/v0.1.0-beta/claudeporter-0.1.0-setup.exe"},},
+    "linux": {"appImage":{"name":"claudeporter-0.1.0.AppImage","size":133226395,"sha256":"4817369771dafb0a1d45d9bc1d22f8772bb9bcb85d652cd9ba8d4243f1f1d79e","url":"https://github.com/arno2546/claude-porter-landing/releases/download/v0.1.0-beta/claudeporter-0.1.0.AppImage"},}
   }
 }
