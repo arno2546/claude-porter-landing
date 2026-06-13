@@ -20,6 +20,14 @@
 
   const PLATFORMS = [
     {
+      key: 'mac',
+      label: 'macOS',
+      formats: [
+        { key: 'dmg', label: 'DMG', primary: true },
+      ],
+      icon: '<svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 20c6-4 12-4 18 0"/><circle cx="7" cy="10" r="2"/><circle cx="17" cy="15" r="2"/><circle cx="22" cy="8" r="2"/></svg>',
+    },
+    {
       key: 'win',
       label: 'Windows',
       formats: [
@@ -69,7 +77,7 @@
   /* ---- Render -------------------------------------------- */
   function renderSkeletons() {
     grid.innerHTML = '';
-    for (var i = 0; i < 2; i++) {
+    for (var i = 0; i < 3; i++) {
       var card = document.createElement('div');
       card.className = 'skeleton';
       card.innerHTML =
