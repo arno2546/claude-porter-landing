@@ -2,6 +2,7 @@
  * ClaudePorter Landing — app.js
  * Fetches releases.json, detects platform, renders download cards.
  * States: loading (skeleton), empty, error, normal.
+ * Supports channel field for beta badge display.
  */
 
 (function () {
@@ -11,6 +12,7 @@
   const grid = document.getElementById('downloads-grid');
   const sub = document.getElementById('downloads-sub');
   const badge = document.getElementById('version-badge');
+  const heroBeta = document.getElementById('hero-beta');
   const topbar = document.getElementById('topbar');
 
   /* ---- Constants ----------------------------------------- */
@@ -76,8 +78,8 @@
   /* ---- Render -------------------------------------------- */
   function renderSkeletons() {
     grid.innerHTML = '';
-    for (let i = 0; i < 3; i++) {
-      const card = document.createElement('div');
+    for (var i = 0; i < 3; i++) {
+      var card = document.createElement('div');
       card.className = 'skeleton';
       card.innerHTML =
         '<div class="skeleton-line"></div>' +
@@ -87,6 +89,7 @@
     }
     sub.textContent = 'Loading the latest release…';
     badge.classList.remove('visible');
+    heroBeta.hidden = true;
   }
 
   function renderError(msg) {
@@ -98,6 +101,7 @@
       '</div>';
     sub.textContent = '';
     badge.classList.remove('visible');
+    heroBeta.hidden = true;
   }
 
   function renderEmpty() {
@@ -108,17 +112,39 @@
       '</div>';
     sub.textContent = '';
     badge.classList.remove('visible');
+    heroBeta.hidden = true;
   }
 
   function renderCards(data, userPlatform) {
     var version = data.latestVersion;
+    var channel = data.channel;
     var assets = data.assets || {};
 
     grid.innerHTML = '';
-    sub.textContent = 'Version ' + version + ' — released ' + formatDate(data.releaseDate);
+
+    /* Build sub line */
+    var subParts = ['Version ' + version];
+    if (channel) {
+      subParts.push('<span class="channel-badge">' + escapeHtml(channel) + '</span>');
+    }
+    subParts.push('— released ' + formatDate(data.releaseDate));
+    sub.innerHTML = subParts.join(' ');
+
+    /* Topbar version badge */
     if (version) {
-      badge.textContent = 'v' + version;
+      var badgeText = 'v' + version;
+      if (channel) {
+        badgeText += ' · ' + channel;
+      }
+      badge.textContent = badgeText;
       badge.classList.add('visible');
+    }
+
+    /* Hero beta badge */
+    if (channel === 'beta') {
+      heroBeta.hidden = false;
+    } else {
+      heroBeta.hidden = true;
     }
 
     var cards = [];
@@ -212,7 +238,7 @@
         month: 'long',
         day: 'numeric',
       });
-    } catch (_) {
+    } catch (e) {
       return '';
     }
   }
