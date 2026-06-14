@@ -4,7 +4,6 @@
   "releaseUrl": "https://github.com/arno2546/claude-porter-landing/releases/tag/v0.1.0-beta",
   "releaseDate": "2026-06-13T12:32:06Z",
   "assets": {
-    "mac": {"dmg":{"name":"claudeporter-0.1.0.dmg","size":125638643,"sha256":"9f50ac32dbff58a2e157fedae27da1ff782b857eb394a67fa54dd0853fef1c04","url":"https://github.com/arno2546/claude-porter-landing/releases/download/v0.1.0-beta/claudeporter-0.1.0.dmg"}},
     "win": {"exe":{"name":"claudeporter-0.1.0-setup.exe","size":102262710,"sha256":"a4d2203f9b169ec6a15875673a8caf0eb5c8e38042141a580b31d5653f0181a6","url":"https://github.com/arno2546/claude-porter-landing/releases/download/v0.1.0-beta/claudeporter-0.1.0-setup.exe"}},
     "linux": {"appImage":{"name":"claudeporter-0.1.0.AppImage","size":133226364,"sha256":"b570e056ad50f2a5471914c5fbbe13e50ef2c2c0f7126ffa1dba068ad066d515","url":"https://github.com/arno2546/claude-porter-landing/releases/download/v0.1.0-beta/claudeporter-0.1.0.AppImage"}}
   }
